@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retrieve</title>
+  <link rel="stylesheet" href="sample-report.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+<body>
+  <header>
+    <ul class="back">
+      <li><a href="sample.html" class="back-active">Back</a></li>
+    </ul>
+    <ul class="navbar">
+      <li><a href="#image-container" class="image">Upload</a></li>
+      <li><a href="#container" class="home">Explore</a></li> 
+    </ul>
+  </header>
+  <section id="image-container">
+  <div style="display: flex; justify-content: center; align-items: center; height: calc(100vh - 80px);">
+    <div class="image-container">
+      <img id="previewImg" hidden src="" alt="Preview" />
+      <div class="overlay-main">
+      <button class="overlay-btn" id="removeBtn">Remove</button>
+      <button class="overlay-btn" id="changeBtn" >Change</button>
+    </div>
+      <input type="file" id="fileInput" accept="image/*" hidden />
+      <button id="uploadBtn">Upload file</button>
+    </div>
+
+    <div class="category-section">
+      <h1>REPORT INFO</h1>
+      <label for="category">Category</label>
+      <select id="category" name="category">
+        <option hidden value="">Select a category A-Z</option>
+        <option value="art">Art Materials</option>
+        <option value="bag">Bag</option>
+        <option value="dress">Dress</option>
+        <option value="earrings">Earrings</option>
+        <option value="envelope">Envelope</option>
+        <option value="hat">Hat</option>
+        <option value="leggings">Leggings</option>
+        <option value="necklace">Necklace</option>
+        <option value="phone">Phone</option>
+        <option value="pouch">Pouch</option>
+        <option value="ring">Ring</option>
+        <option value="shoes">Shoes</option>
+        <option value="shorts">Shorts</option>
+        <option value="skirt">Skirt</option>
+        <option value="socks">Socks</option>
+        <option value="school-id">School ID</option>
+        <option value="school-uniform">School Uniform</option>
+        <option value="tumbler">Tumbler</option>
+        <option value="wallet">Wallet</option>
+      </select>
+      <br />
+
+      <label for="status">Status</label>
+      <select id="status" name="status">
+        <option hidden value="">Status</option>
+        <option value="lost" href="#lost">Lost Item</option>
+        <option value="found" href="#found">Found Item</option>
+      </select>
+      <br />
+
+      <label for="description" id="description">Description</label><br />
+      <input type="text" id="descriptionInput" placeholder="Add a short description..." required />
+      <br />
+
+      <label for="contact" id="contact">Email Address</label><br />
+      <input type="text" id="contactInput" placeholder="roi***@gmail.com" />
+      <br />
+
+      <div class="button-container">
+        <button type="button" id="saveBtn" class="save-btn">Save Report</button>
+        <button type="button" class="cancel-btn">Cancel</button>
+      </div>
+
+      <div id="checkPopup" class="check-popup">
+        <svg class="checkmark" viewBox="0 0 24 24">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="between">Explore</div>
+  <section id="container">
+    <section id="container">
+      <div class="container">
+        <button name="all">Show All</button>
+        <button name="lost">Lost Items</button>
+        <button name="found">Found Items</button>
+        <button name="claim">Claim</button>
+    <div class="search-wrapper">
+      <input type="text" id="categorySearch" placeholder="Search...">
+      <button type="submit" id="categorySearchBtn" name="search">
+      <i class="fa fa-search"></i>
+      </button>
+      
+      <ul id="results"></ul>
+
+    </div>
+      </form>
+    </div>
+    </div>
+</div>
+
+  <div id="cardsContainer">
+  <div class="cardbox">
+  
+</div>
+</section>
+  <script src="sample-report.js"></script>
+</body>
+</html>
